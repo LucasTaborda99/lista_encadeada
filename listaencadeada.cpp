@@ -57,11 +57,11 @@ void inicia(node *LISTA)
 int menu(void)
 {
  int opt;
- 
- printf("===================");
- printf("\n");
- printf("Escolha a opção\n");
- printf("===================");
+ printf("\n\n================================================\n");
+ printf("LISTA ENCADEADA\n");
+ printf("==================================================");
+ printf("\nEscolha a opção\n");
+ printf("================================================");
  printf("\n");
  printf("0. Sair\n");
  printf("1. Zerar lista\n");
@@ -72,11 +72,11 @@ int menu(void)
  printf("6. Retirar do início\n");
  printf("7. Retirar do fim\n");
  printf("8. Escolher de onde tirar\n");
- printf("===================");
+ printf("================================================");
  printf("\n");
 
  printf("Opção: "); scanf("%d", &opt);
- printf("===================");
+ printf("================================================");
  printf("\n");
 
  return opt;
@@ -90,7 +90,7 @@ void opcao(node *LISTA, int op)
    libera(LISTA);
    printf("The application has ended, come back soon !!!");
    printf("\n");
-   printf("===================");
+   printf("================================================");
    break;
    
   case 1:
@@ -116,17 +116,17 @@ void opcao(node *LISTA, int op)
   
   case 6:
    tmp= retiraInicio(LISTA);
-   printf("Retirado: %3d\n\n", tmp->num);
+   printf("Retirado: %d\n\n", tmp->num);
    break;
    
   case 7:
    tmp= retiraFim(LISTA);
-   printf("Retirado: %3d\n\n", tmp->num);
+   printf("Retirado: %d\n\n", tmp->num);
    break;
   
   case 8:
    tmp= retira(LISTA);
-   printf("Retirado: %3d\n\n", tmp->num);
+   printf("Retirado: %d\n\n", tmp->num);
    break;
   
   default:
@@ -196,7 +196,7 @@ void exibe(node *LISTA)
  tmp = LISTA->prox;
  printf("Lista:");
  while( tmp != NULL){
-  printf("%5d", tmp->num);
+  printf("%d", tmp->num);
   tmp = tmp->prox;
  }
  printf("\n        ");
@@ -205,7 +205,7 @@ void exibe(node *LISTA)
   printf("  ^  ");
  printf("\nOrdem:");
  for(count=0 ; count < tam ; count++)
-  printf("%5d", count+1);
+  printf("%d", count+1);
  
   
  printf("\n\n");
